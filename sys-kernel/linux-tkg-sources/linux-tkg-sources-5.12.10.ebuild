@@ -156,6 +156,6 @@ pkg_setup() {
 
 pkg_postinst() {
 	elog "MICROCODES"
-	elog "Use linux-tkg-bmq-sources with microcodes"
+	elog "Use linux-tkg-sources with microcodes"
 	elog "Read https://wiki.gentoo.org/wiki/Intel_microcode"
 }

@@ -49,8 +49,7 @@ https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-pat
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0002-mm-Support-soft-dirty-flag-read-with-reset.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0003-glitched-base.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0004-5.12-ck1.patch
-https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0004-glitched-muqss.patch
-https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0004-glitched-ondemand-muqss.patch
+http://ck.kolivas.org/patches/muqss/5.0/5.12/0001-MultiQueue-Skiplist-Scheduler-v0.210.patch -> 0004-muqss.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0005-glitched-pds.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0006-add-acs-overrides_iommu.patch
 https://raw.githubusercontent.com/Frogging-Family/linux-tkg/master/linux-tkg-patches/5.12/0007-v5.12-fsync.patch
@@ -75,8 +74,7 @@ PATCHES=( "${DISTDIR}/0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.
 "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"
 "${DISTDIR}/0003-glitched-base.patch"
 "${DISTDIR}/0004-5.12-ck1.patch"
-"${DISTDIR}/0004-glitched-muqss.patch"
-"${DISTDIR}/0004-glitched-ondemand-muqss.patch"
+"${DISTDIR}/0004-muqss.patch"
 "${DISTDIR}/0005-glitched-pds.patch"
 "${DISTDIR}/0006-add-acs-overrides_iommu.patch"
 "${DISTDIR}/0007-v5.12-fsync.patch"
@@ -134,8 +132,7 @@ src_prepare() {
 		eapply "${DISTDIR}/0002-mm-Support-soft-dirty-flag-read-with-reset.patch"	||	die
 		eapply "${DISTDIR}/0002-clear-patches.patch"	||	die
 		eapply "${DISTDIR}/0003-glitched-base.patch"	||	die
-		eapply "${DISTDIR}/0004-glitched-ondemand-muqss.patch"	||	die
-		eapply "${DISTDIR}/0004-glitched-muqss.patch"	||	die
+		eapply "${DISTDIR}/0004-muqss.patch"	||	die
 		eapply "${DISTDIR}/0004-5.12-ck1.patch"	||	die
 		eapply "${DISTDIR}/0006-add-acs-overrides_iommu.patch"	||	die
 		eapply "${DISTDIR}/0007-v5.12-fsync.patch"	||	die

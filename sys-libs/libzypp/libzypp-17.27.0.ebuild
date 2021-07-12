@@ -5,7 +5,7 @@ EAPI=7
 
 inherit cmake ninja-utils
 
-SRC_URI="https://github.com/openSUSE/libzypp/archive/refs/tags/${PV}.tar.gz"
+SRC_URI="https://github.com/openSUSE/libzypp/archive/refs/tags/${PV}.tar.gz -> libzypp-${PV}.tar.gz"
 KEYWORDS="~amd64"
 DESCRIPTION="ZYpp Package Management library"
 HOMEPAGE="https://doc.opensuse.org/projects/libzypp/HEAD/"

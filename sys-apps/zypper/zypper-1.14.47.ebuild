@@ -5,7 +5,7 @@ EAPI=7
 
 inherit cmake
 
-SRC_URI="https://github.com/openSUSE/zypper/archive/refs/tags/${PV}.tar.gz"
+SRC_URI="https://github.com/openSUSE/zypper/archive/refs/tags/${PV}.tar.gz -> zypper-${PV}.tar.gz"
 KEYWORDS="~amd64"
 DESCRIPTION="World's most powerful command line package manager"
 HOMEPAGE="https://en.opensuse.org/Portal:Zypper"

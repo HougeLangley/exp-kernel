@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake ninja-utils
+inherit cmake
 
 SRC_URI="https://github.com/openSUSE/zypper/archive/refs/tags/${PV}.tar.gz"
 KEYWORDS="~amd64"
@@ -14,29 +14,25 @@ SLOT="0"
 IUSE=""
 RDEPEND=""
 DEPEND="
-    app-admin/augeas
-    sys-libs/libzypp
-    dev-lang/perl
-    sys-process/procps
+	app-admin/augeas
+	sys-libs/libzypp
+	dev-lang/perl
+	sys-process/procps
 "
 BDEPEND="${DEPEND}"
 
 S="${PN}-${PV}"
 
-src_prepare() {
-    cmake_src_prepare
-}
-
 src_configure(){
-    mycmakeargs=(
-        -D CMAKE_INSTALL_PREFIX=/usr
-        -D CMAKE_BUILD_TYPE=Release
-        -D LIB=lib
-        -D ZYPP_PREFIX=/usr
-    )
+	mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX="/usr"
+		-DCMAKE_BUILD_TYPE=Release
+		-DCMAKE_DIR_LIB="$(get_libdir)/${P}"
+		-DZYPP_PREFIX="/usr"
+		-DCMARK_LIB_FUZZER=OFF
+		-DCMARK_SHARED=ON
+		-DCMARK_STATIC=OFF
+		-DCMARK_TESTS="$(usex test)"
+	)
     cmake_src_configure
-}
-
-src_install(){
-    cmake_src_install
 }

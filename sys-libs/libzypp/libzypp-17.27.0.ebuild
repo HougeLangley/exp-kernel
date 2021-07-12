@@ -34,7 +34,7 @@ BDEPEND="${DEPEND}
 	dev-util/ninja
 "
 
-S="${PN}-${PV}"
+S="${WORKDIR}/${PN}-${PV}"
 
 src_configure(){
 	mycmakeargs=(

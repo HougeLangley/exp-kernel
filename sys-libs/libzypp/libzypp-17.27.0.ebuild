@@ -14,31 +14,40 @@ SLOT="0"
 IUSE=""
 RDEPEND=""
 DEPEND="
-    dev-libs/boost
-    sys-libs/libzypp
-    dev-lang/perl
-    sys-process/procps
+	dev-libs/boost
+	dev-ruby/gpgme
+	net-libs/libproxy
+	dev-libs/libsigc++
+	sys-apps/systemd
+	dev-libs/libxml2
+	dev-cpp/yaml-cpp
 "
-BDEPEND="${DEPEND}"
+BDEPEND="${DEPEND}
+	app-text/asciidoc
+	dev-util/cmake
+	dev-util/dejagnu
+	app-doc/doxygen
+	dev-libs/expat
+	dev-vcs/git
+	app-crypt/gnupg
+	media-gfx/graphviz
+	dev-util/ninja
+"
 
 S="${PN}-${PV}"
 
-src_prepare() {
-    cmake_src_prepare
-}
-
 src_configure(){
-    mycmakeargs=(
-        -B build
-        -G Ninja
-        -D CMAKE_INSTALL_PREFIX=/usr
-        -D CMAKE_BUILD_TYPE=Release
-        -D LIB=lib
-        -D ZYPP_PREFIX=/usr
-    )
-    cmake_src_configure
-}
-
-src_install(){
-    cmake_src_install
+	mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX="/usr"
+		-DCMAKE_BUILD_TYPE=Release
+		-DCMAKE_DRI_LIB="$(get_libdir)/${P}"
+		-DCMAKE_SKIP_RPATH=1
+		-DDISABLE_MEDIABACKEND_TESTS=ON
+		-DENABLE_BUILD_DOCS=ON
+		-DENABLE_BUILD_TRANS=ON
+		-DENABLE_BUILD_TESTS=ON
+		-DENABLE_ZCHUNK_COMPRESSION=ON
+		-D ENABLE_ZSTD_COMPRESSION=ON
+	)
+	cmake_src_configure
 }

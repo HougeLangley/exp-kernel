@@ -15,7 +15,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="
 	dev-libs/boost
-	dev-ruby/gpgme
+	app-crypt/gpgme
 	net-libs/libproxy
 	dev-libs/libsigc++
 	sys-apps/systemd

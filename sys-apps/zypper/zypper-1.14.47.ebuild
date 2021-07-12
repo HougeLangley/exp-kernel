@@ -29,8 +29,6 @@ src_prepare() {
 
 src_configure(){
     mycmakeargs=(
-        -B build
-        -G Ninja
         -D CMAKE_INSTALL_PREFIX=/usr
         -D CMAKE_BUILD_TYPE=Release
         -D LIB=lib

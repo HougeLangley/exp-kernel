@@ -32,6 +32,7 @@ BDEPEND="${DEPEND}
 	app-crypt/gnupg
 	media-gfx/graphviz
 	dev-util/ninja
+	dev-util/rpmdevtools
 "
 
 S="${WORKDIR}/${PN}-${PV}"

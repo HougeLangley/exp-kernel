@@ -29,10 +29,6 @@ src_configure(){
 		-DCMAKE_BUILD_TYPE=Release
 		-DCMAKE_DIR_LIB="$(get_libdir)/${P}"
 		-DZYPP_PREFIX="/usr"
-		-DCMARK_LIB_FUZZER=OFF
-		-DCMARK_SHARED=ON
-		-DCMARK_STATIC=OFF
-		-DCMARK_TESTS="$(usex test)"
 	)
 	cmake_src_configure
 }

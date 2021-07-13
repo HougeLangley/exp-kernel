@@ -18,6 +18,7 @@ DEPEND="
 	sys-libs/libzypp
 	dev-lang/perl
 	sys-process/procps
+	dev-ruby/asciidoctor
 "
 BDEPEND="${DEPEND}"
 

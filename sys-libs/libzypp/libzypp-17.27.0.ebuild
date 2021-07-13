@@ -17,7 +17,7 @@ DEPEND="
 	dev-libs/boost
 	app-crypt/gpgme
 	net-libs/libproxy
-	dev-libs/libsigc++
+	dev-libs/libsigc++:2
 	sys-apps/systemd
 	dev-libs/libxml2
 	dev-cpp/yaml-cpp

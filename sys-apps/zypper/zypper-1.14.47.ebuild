@@ -34,5 +34,5 @@ src_configure(){
 		-DCMARK_STATIC=OFF
 		-DCMARK_TESTS="$(usex test)"
 	)
-    cmake_src_configure
+	cmake_src_configure
 }

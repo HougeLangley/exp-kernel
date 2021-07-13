@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake ninja-utils
+inherit cmake
 
 SRC_URI="https://github.com/openSUSE/libzypp/archive/refs/tags/${PV}.tar.gz -> libzypp-${PV}.tar.gz"
 KEYWORDS="~amd64"
@@ -21,6 +21,7 @@ DEPEND="
 	sys-apps/systemd
 	dev-libs/libxml2
 	dev-cpp/yaml-cpp
+	sys-libs/libsolv
 "
 BDEPEND="${DEPEND}
 	app-text/asciidoc

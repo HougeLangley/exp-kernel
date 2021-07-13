@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<homepage>https://github.com/openSUSE/zypper</homepage>
+		<bugs-to>https://github.com/openSUSE/zypper</bugs-to>
 	</upstream>
 	<maintainer type="person">
 		<email>hougelangley1987@gmail.com</email>

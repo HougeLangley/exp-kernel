@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<upstream>
-		<doc>https://github.com/openSUSE/libzypp</doc>
+		<bugs-to>https://github.com/zchunk/zchunk</bugs-to>
 	</upstream>
 	<maintainer type="person">
 		<email>hougelangley1987@gmail.com</email>
